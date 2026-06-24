@@ -1,14 +1,12 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Baneado98/ci-sentinel",
-  "description": "Security auditor for GitHub Actions workflows: detects script/expression injection, pull_request_target/workflow_run pwn requests, excessive GITHUB_TOKEN permissions, unpinned/transitive third-party actions, self-hosted runner RCE and OIDC misuse.",
+  "description": "Multi-CI security scanner with a live threat-intel feed of compromised CI components",
   "version": "0.1.0",
-  "packages": [
+  "remotes": [
     {
-      "registryType": "npm",
-      "identifier": "ci-sentinel-mcp",
-      "version": "0.1.0",
-      "transport": { "type": "stdio" }
+      "type": "streamable-http",
+      "url": "https://ci-sentinel.vercel.app/mcp"
     }
   ],
   "repository": {
