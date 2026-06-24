@@ -1,0 +1,19 @@
+# Smithery configuration for ci-sentinel
+# https://smithery.ai/docs
+#
+# The published package is the THIN CLIENT (prebuilt dist/) — it only fetches the
+# hosted ci-sentinel service. No build step / engine source is shipped.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      CI_SENTINEL_KEY:
+        type: string
+        description: "Optional prepaid Pro key to unlock the deep CI/CD security audit."
+  commandFunction: |-
+    (config) => ({
+      command: "node",
+      args: ["dist/mcp.js"],
+      env: config.CI_SENTINEL_KEY ? { CI_SENTINEL_KEY: config.CI_SENTINEL_KEY } : {}
+    })

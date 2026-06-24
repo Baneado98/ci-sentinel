@@ -1,0 +1,71 @@
+{
+  "name": "ci-sentinel-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.Baneado98/ci-sentinel",
+  "description": "Security auditor for SEVEN CI ecosystems — GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Azure Pipelines, Bitbucket Pipelines and Travis CI — as an MCP tool with a LIVE threat-intelligence feed of known-compromised CI components. Detects script/command injection, pull_request_target/workflow_run pwn requests, excessive GITHUB_TOKEN/CI_JOB_TOKEN permissions, unpinned/transitive third-party actions, self-hosted runner RCE, OIDC misuse and supply-chain hijacks (e.g. tj-actions/changed-files CVE-2025-30066). Free quick verdict; deep audit (file:line, full taint path, action graph, SARIF, fixes) via x402 USDC micropayment or a prepaid card key.",
+  "type": "module",
+  "bin": {
+    "ci-sentinel-mcp": "dist/mcp.js"
+  },
+  "main": "dist/mcp.js",
+  "files": [
+    "dist/mcp.js",
+    "dist/mcpServer.js",
+    "dist/types.js",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baneado98/ci-sentinel.git"
+  },
+  "homepage": "https://ci-sentinel.vercel.app",
+  "bugs": {
+    "url": "https://github.com/Baneado98/ci-sentinel/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node dist/mcp.js",
+    "start:mcp": "node dist/mcp.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github-actions",
+    "gitlab-ci",
+    "gitlab",
+    "jenkins",
+    "jenkinsfile",
+    "circleci",
+    "azure-pipelines",
+    "bitbucket-pipelines",
+    "travis-ci",
+    "ci-cd",
+    "ci-cd-security",
+    "security",
+    "supply-chain",
+    "supply-chain-security",
+    "threat-intelligence",
+    "compromised-action",
+    "tj-actions",
+    "imposter-commit",
+    "multi-ci",
+    "script-injection",
+    "pipeline-injection",
+    "pull-request-target",
+    "github-token",
+    "ci-job-token",
+    "artifact-poisoning",
+    "devsecops",
+    "x402",
+    "ai-agent"
+  ],
+  "author": "ci-sentinel",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}
